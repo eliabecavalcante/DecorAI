@@ -1,0 +1,68 @@
+/* /client/app/globals.css */
+:root {
+  --glass-blur: 20px; 
+  --glass-bg-light: rgba(255, 255, 255, 0.5);
+  --glass-border-light: 1px solid rgba(255, 255, 255, 0.3);
+  
+  --cor-principal: #6366F1;
+  --cor-fundo: #FFFFFF;
+  --cor-texto: #111827;
+  --cor-texto-secundario: #6B7280;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  overflow-y: auto;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+* { box-sizing: border-box; }
+
+.textocomsombra {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.glass-effect {
+  background: var(--glass-bg-light);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: background 0.3s, border 0.3s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* =====================================
+== MUDANÇA AQUI (Correção do Rodapé)
+=====================================
+*/
+@media (max-width: 768px) {
+  body {
+    /* Adiciona espaço no fim da página
+      para a BottomBar não cobrir o Footer.
+      Altura da Barra (65px) + Margem (20px) = 85px.
+      Usamos 90px para garantir.
+    */
+    padding-bottom: 90px;
+  }
+}

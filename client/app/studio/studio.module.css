@@ -1,0 +1,276 @@
+/* /client/app/studio/studio.module.css */
+
+/* ... (Todo o código do .studioBackground, .studioContainer, .pageContent, .header) ... */
+.studioBackground {
+  background-color: #F9FAFB; /* Fundo cinza claro */
+  min-height: 100vh;
+}
+
+.studioContainer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 3.5rem;
+  padding: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+  letter-spacing: 3.5px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  letter-spacing: 1.3px;
+  color: var(--cor-texto-secundario);
+  margin-top: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+/* ... (Todo o código do .optionCard, .optionIcon, .optionTitle, etc.) ... */
+.optionCard {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 40px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.optionIcon {
+  font-size: 2.5rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.optionCard:hover .optionIcon {
+  transform: scale(1.1);
+}
+
+.optionTitle {
+  font-size: 1.75rem; 
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+.optionDesc {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 10px 0 25px 0;
+  flex-grow: 1; 
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 25px;
+  min-height: 25px;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: #F3F4F6;
+  color: #4B5563;
+}
+
+.uploadVariant .optionIcon {
+  background-color: #EFF6FF;
+  color: #3B82F6;
+}
+.cameraVariant .optionIcon {
+  background-color: #FDF2F8;
+  color: #DB2777;
+}
+
+.optionButton {
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.uploadButton:hover,
+.cameraButton:hover {
+  transform: scale(1.05); 
+}
+
+.uploadButton {
+  background-color: #4F46E5;
+  color: #FFFFFF;
+}
+.cameraButton {
+  background-color: #C026D3;
+  color: #FFFFFF;
+}
+
+/* =====================================
+== MUDANÇA AQUI (Otimização Mobile)
+=====================================
+*/
+@media (max-width: 768px) {
+  .studioContainer {
+    padding-top: 80px; /* Menos padding */
+  }
+  .title {
+    font-size: 2.5rem; /* Reduzido de 3.5rem */
+    letter-spacing: 1px;
+    padding: 0.5rem;
+  }
+  .subtitle {
+    font-size: 1rem; /* Reduzido de 1.3rem */
+    letter-spacing: normal;
+    padding: 0.5rem;
+  }
+  .optionsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px; /* Menos gap */
+  }
+  .optionCard {
+    padding: 30px; /* Menos padding */
+  }
+  .optionTitle {
+    font-size: 1.5rem; /* Reduzido */
+  }
+}
+
+/* ===============================================
+== ESTILOS DA SEÇÃO DE DICAS
+===============================================
+*/
+/* ... (Todo o código do .tipsSection, .tipsBox, .tipsGrid, etc.) ... */
+.tipsSection {
+  margin-top: 60px;
+}
+
+.tipsBox {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 30px 40px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.tipsTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px; 
+}
+
+.tipCard {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  gap: 15px; 
+}
+
+.tipIcon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; 
+  margin: 0; 
+}
+
+.tipTextContent {
+  text-align: left;
+}
+
+.tipCardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0 0 5px 0; 
+}
+
+.tipCardText {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.tipVariant1 .tipIcon {
+  background-color: #E0E7FF;
+  color: #4F46E5;
+}
+.tipVariant2 .tipIcon {
+  background-color: #F3E8FF;
+  color: #9333EA;
+}
+.tipVariant3 .tipIcon {
+  background-color: #D1FAE5;
+  color: #059669;
+}
+.tipVariant4 .tipIcon {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+/* =====================================
+== MUDANÇA AQUI (Otimização Mobile)
+=====================================
+*/
+@media (max-width: 768px) {
+  .tipsSection {
+    margin-top: 40px;
+  }
+  .tipsBox {
+    padding: 20px;
+  }
+  .tipsTitle {
+    font-size: 1.5rem; /* Reduzido */
+  }
+  .tipsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px; /* Reduzido */
+  }
+}

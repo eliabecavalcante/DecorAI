@@ -1,0 +1,59 @@
+/* /client/app/components/StudioHeader.module.css */
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: var(--cor-fundo);
+  border-bottom: 1px solid #E5E7EB;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 60px;
+  width: auto;
+  
+  /* =====================================
+  == MUDANÇA AQUI (Adiciona transição suave)
+  =====================================
+  */
+  transition: transform 0.3s ease;
+}
+
+/* =====================================
+== MUDANÇA AQUI (Adiciona o efeito de scale)
+=====================================
+*/
+.logoImage:hover {
+  transform: scale(1.05); /* Zoom de 5% */
+}
+
+
+.backButton {
+  background-color: transparent;
+  color: var(--cor-texto-secundario);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.backButton:hover {
+  background-color: #F9FAFB;
+  color: var(--cor-texto);
+}

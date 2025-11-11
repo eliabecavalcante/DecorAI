@@ -1,0 +1,553 @@
+/* /client/app/page.module.css */
+
+/* ===============================================
+== ESTILOS DA SEÇÃO 1: HERO
+===============================================
+*/
+/* ... (Todo o código do .hero, .featuresSection, etc. está aqui) ... */
+.hero {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                    url('https://i.imgur.com/ZJFLvUx.png');
+  background-size: cover;
+  background-position: center;
+  position: relative; 
+  z-index: 1;
+  padding-top: 20rem; 
+  padding-bottom: 13rem;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 5rem;
+  letter-spacing: 3px;
+  padding-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  line-height: 1.2;
+  margin: 0;
+  max-width: 700px;
+}
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--cor-texto-secundario);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+}
+.buttonPrimary {
+  background-color: var(--cor-principal);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+.buttonPrimary:hover {
+  background-color: #4F46E5;
+  transform: scale(1.1);
+}
+.buttonSecondary {
+  background-color: transparent;
+  color: var(--cor-texto);
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buttonSecondary:hover {
+  background-color: #F9FAFB;
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .buttonGroup {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+/* ===============================================
+== ESTILOS DA SEÇÃO 2: RECURSOS REVOLUCIONÁRIOS
+===============================================
+*/
+.featuresSection {
+  padding: 80px 0;
+  background-color: var(--cor-fundo); 
+}
+.featuresHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.featuresTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+.featuresSubtitle {
+  font-size: 1.125rem;
+  color: var(--cor-texto-secundario);
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.featureCard {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featureCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  z-index: 2;
+}
+.featureIcon {
+  font-size: 2rem;
+}
+.featureCardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.featureCardText {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .featuresSection {
+    padding: 50px 0;
+  }
+  .featuresTitle {
+    font-size: 2rem;
+  }
+  .featuresSubtitle {
+    font-size: 1rem;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===============================================
+== ESTILOS DA SEÇÃO 3: COMO FUNCIONA
+===============================================
+*/
+.howItWorksSection {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+.howItWorksHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.howItWorksTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+.howItWorksSubtitle {
+  font-size: 1.125rem;
+  color: var(--cor-texto-secundario);
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.stepItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.stepItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.stepContent {
+  flex: 1;
+  max-width: 450px;
+}
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.stepNumber {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #3b61ad; /* Sua cor personalizada */
+  line-height: 1;
+}
+.stepIcon {
+  font-size: 1.5rem;
+  background-color: #8092cdc7; /* Sua cor personalizada */
+  color: var(--cor-principal);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.stepTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.stepText {
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 0;
+}
+.stepImagePlaceholder {
+  flex: 1;
+  height: 350px;
+  background-color: #E5E7EB;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.stepItem:nth-child(1) .stepImagePlaceholder {
+  background-image: url('https://i.imgur.com/wXWlzcA.png');
+}
+.stepItem:nth-child(2) .stepImagePlaceholder {
+  background-image: url('https://i.imgur.com/nvtvBOd.jpeg');
+}
+.stepItem:nth-child(3) .stepImagePlaceholder {
+  background-image: url('https://i.imgur.com/RbrpK0K.png');
+}
+.stepItem:nth-child(4) .stepImagePlaceholder {
+  background-image: url('https://i.imgur.com/K8RjJCF.png');
+}
+
+@media (max-width: 768px) {
+  .howItWorksSection {
+    padding: 50px 0;
+  }
+  .howItWorksTitle {
+    font-size: 2rem;
+  }
+  .howItWorksSubtitle {
+    font-size: 1rem;
+  }
+  .stepItem,
+  .stepItem:nth-child(even) {
+    flex-direction: column;
+  }
+  .stepContent {
+    max-width: 100%;
+    text-align: center;
+  }
+  .stepHeader {
+    justify-content: center;
+  }
+  .stepNumber {
+    font-size: 3rem;
+  }
+  
+  .stepImagePlaceholder {
+    width: 100%;
+    height: 250px;
+    background-size: cover; 
+    background-position: center;
+  }
+  
+  /* =====================================
+  == CORREÇÃO FORÇADA (RE-DECLARANDO IMAGENS)
+  == Esta é a correção que faltava.
+  =====================================
+  */
+  .stepItem:nth-child(1) .stepImagePlaceholder {
+    background-image: url('https://i.imgur.com/wXWlzcA.png');
+  }
+  .stepItem:nth-child(2) .stepImagePlaceholder {
+    background-image: url('https://i.imgur.com/nvtvBOd.jpeg');
+  }
+  .stepItem:nth-child(3) .stepImagePlaceholder {
+    background-image: url('https://i.imgur.com/RbrpK0K.png');
+  }
+  .stepItem:nth-child(4) .stepImagePlaceholder {
+    background-image: url('https://i.imgur.com/K8RjJCF.png');
+  }
+  
+  .stepTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===============================================
+== SEÇÃO 4: PROJETOS INSPIRADORES
+===============================================
+*/
+/* ... (O resto do arquivo continua o mesmo) ... */
+.gallerySection {
+  padding: 80px 0;
+  background-color: #F9FAFB; 
+}
+.galleryHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.galleryTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+.gallerySubtitle {
+  font-size: 1.125rem;
+  color: var(--cor-texto-secundario);
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.galleryCard {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden; 
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+.galleryImage {
+  height: 250px;
+  background-color: #E5E7EB;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-out; 
+}
+.galleryCard:hover .galleryImage {
+  transform: scale(1.05);
+}
+.galleryCardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 20px 20px 5px 20px;
+}
+.galleryCardText {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  margin: 0 20px 20px 20px;
+}
+.galleryImg1 { background-image: url('https://i.imgur.com/rx5Yuvo.png'); }
+.galleryImg2 { background-image: url('https://i.imgur.com/yOGFI9Z.png'); }
+.galleryImg3 { background-image: url('https://i.imgur.com/ou9bzSH.png'); }
+.galleryImg4 { background-image: url('https://i.imgur.com/TBBZu8w.png'); }
+.galleryImg5 { background-image: url('https://i.imgur.com/S4MTKoA.png'); }
+.galleryImg6 { background-image: url('https://i.imgur.com/b8luGIb.png'); }
+.galleryButtonWrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+@media (max-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .galleryTitle {
+    font-size: 2rem;
+  }
+  .gallerySubtitle {
+    font-size: 1rem;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===============================================
+== SEÇÃO 5: PLANOS E PREÇOS
+===============================================
+*/
+.pricingSection {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+.pricingHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pricingTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+.pricingSubtitle {
+  font-size: 1.125rem;
+  color: var(--cor-texto-secundario);
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.pricingCard {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.pricingCardPopular {
+  border-color: var(--cor-principal);
+  border-width: 2px;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+.pricingCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+.popularTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--cor-principal);
+  color: #FFFFFF;
+  padding: 4px 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: translateX(50%) translateY(50%) rotate(45deg);
+  transform-origin: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.pricingCardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0 0 10px 0;
+}
+.pricingCardPrice {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+.pricePerMonth {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  margin-left: 5px;
+}
+.pricingCardDesc {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 10px 0 25px 0;
+  min-height: 45px;
+}
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.featuresList li {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pricingCard .buttonSecondary,
+.pricingCard .buttonPrimary {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .pricingSection {
+    padding: 50px 0;
+  }
+  .pricingTitle {
+    font-size: 2rem;
+  }
+  .pricingSubtitle {
+    font-size: 1rem;
+  }
+}

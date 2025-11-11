@@ -1,0 +1,75 @@
+/* /client/app/components/Header.module.css */
+
+/* =====================================
+== MUDANÇA AQUI (Regras de Posição Adicionadas)
+=====================================
+*/
+.header {
+  height: 70px;
+  
+  /* Posição (movida do globals.css) */
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  
+  /* Borda (específica do Header) */
+  border-bottom: var(--glass-border-light);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 60px; 
+  width: auto;  
+  transition: transform 0.3s ease;
+}
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.links {
+  display: flex;
+  gap: 30px; 
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+}
+.links a {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.links a:hover {
+  color: var(--cor-texto);
+}
+.ctaButton {
+  background-color: var(--cor-principal);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.ctaButton:hover {
+  background-color: #4F46E5;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}

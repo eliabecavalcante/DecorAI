@@ -1,0 +1,238 @@
+/* /client/app/studio/scan/scan.module.css */
+
+.scanContainer {
+  display: flex;
+  gap: 30px;
+}
+
+/* Coluna da Esquerda (Conteúdo) */
+.contentColumn {
+  flex: 2;
+}
+/* ... (Todo o código do .cameraBox, .cameraIcon, etc.) ... */
+.cameraBox {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  min-height: 500px; 
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cameraIcon {
+  font-size: 3rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #F3E8FF;
+  color: #9333EA;
+}
+
+.cameraTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+.cameraSubtitle {
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  margin: 10px 0 30px 0;
+}
+
+.cameraButton {
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+.cameraButton:hover {
+  transform: scale(1.05);
+  background-color: #4338CA;
+}
+
+.videoContainer {
+  width: 100%;
+  position: relative;
+}
+.videoFeed {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transform: scaleX(-1);
+}
+.videoHidden {
+  display: none;
+}
+.captureButton {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.captureButton:hover {
+  transform: translateX(-50%) scale(1.1);
+  background-color: #FFFFFF;
+}
+.canvasPreview {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.canvasHidden {
+  display: none;
+}
+.previewControls {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.retakeButton {
+  background-color: transparent;
+  color: var(--cor-texto);
+  border: 1px solid #E5E7EB;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.retakeButton:hover {
+  background-color: #F9FAFB;
+  transform: scale(1.05);
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #F3F4F6;
+  border-top-color: var(--cor-principal);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Coluna da Direita (Sidebar de Progresso) */
+.sidebarColumn {
+  flex: 1;
+}
+/* ... (Todo o código do .progressBox, .progressTitle, etc.) ... */
+.progressBox {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.progressTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.progressList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.5;
+}
+
+.progressStep.stepActive {
+  opacity: 1;
+}
+
+.stepIcon {
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #F3F4F6;
+  color: #6B7280;
+}
+
+.progressStep.stepActive .stepIcon {
+  background-color: #E0E7FF;
+  color: #4F46E5;
+}
+
+.stepText h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0 0 4px 0;
+}
+
+.stepText p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin: 0;
+}
+
+/* =====================================
+== MUDANÇA AQUI (Otimização Mobile)
+=====================================
+*/
+@media (max-width: 900px) {
+  .scanContainer {
+    flex-direction: column-reverse; /* Empilha */
+    gap: 20px; /* Menos gap */
+  }
+  .cameraBox {
+    padding: 30px; /* Menos padding */
+    min-height: 400px;
+  }
+  .cameraTitle {
+    font-size: 1.5rem; /* Reduzido */
+  }
+  .progressBox {
+    padding: 20px;
+  }
+}

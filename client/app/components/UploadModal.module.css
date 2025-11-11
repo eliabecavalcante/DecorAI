@@ -1,0 +1,177 @@
+/* /client/app/components/UploadModal.module.css */
+
+.uploadPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* NOVO: O input de arquivo real (escondido) */
+.hiddenInput {
+  display: none;
+}
+
+/* Caixa de Upload */
+.uploadBox {
+  border: 2px dashed #D1D5DB;
+  border-radius: 12px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Transição para o estado 'isDragging' */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* NOVO: Estilo de "arrastando" */
+.uploadBox.isDragging {
+  background-color: #EFF6FF; /* Fundo azul claro */
+  border-color: var(--cor-principal); /* Borda azul/roxa */
+}
+
+
+.uploadIcon {
+  font-size: 3rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #EFF6FF;
+  color: #3B82F6;
+}
+
+/* NOVO: Ícone de check (para o preview) */
+.uploadBox .uploadIcon:nth-child(1) {
+  background-color: #D1FAE5; /* Verde-claro */
+  color: #059669; /* Verde-escuro */
+}
+
+
+.uploadTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+.uploadSubtitle {
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  margin-top: 10px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 30px 0;
+}
+
+.tag {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: #F3F4F6;
+  color: #4B5563;
+}
+
+.uploadButton {
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+.uploadButton:hover {
+  transform: scale(1.05);
+}
+
+/* NOVO: Estilos da área de Preview */
+.fileName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  margin-top: 10px;
+  margin-bottom: 30px;
+  /* Para o caso de nomes de arquivo muito longos */
+  word-break: break-all;
+}
+
+.previewButtonRow {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.removeButton {
+  flex: 1; /* Ocupa metade do espaço */
+  background-color: transparent;
+  color: #EF4444; /* Vermelho */
+  border: 1px solid #FCA5A5; /* Borda vermelha clara */
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.removeButton:hover {
+  background-color: #FEF2F2; /* Fundo vermelho bem claro */
+  transform: scale(1.05);
+}
+
+.previewButtonRow .uploadButton {
+  flex: 1; /* Ocupa a outra metade */
+}
+
+
+/* Caixa de Dicas */
+.tipsBox {
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 30px;
+  border-left-width: 4px;
+  border-left-color: var(--cor-principal);
+  border-right-width: 4px;
+  border-right-color: var(--cor-principal);
+}
+
+.tipsTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.tipsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tipsList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+}
+
+.tipIcon {
+  font-size: 1rem;
+  color: var(--cor-principal);
+}

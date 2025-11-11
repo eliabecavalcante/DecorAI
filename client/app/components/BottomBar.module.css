@@ -1,0 +1,48 @@
+/* /client/app/components/BottomBar.module.css */
+
+.bottomBar {
+  display: none; 
+  position: fixed;
+  bottom: 20px; /* <--- ESTA REGRA AGORA VAI FUNCIONAR */
+  left: 10px;
+  right: 10px;
+  height: 65px;
+  
+  border-radius: 50px; 
+  padding: 0 10px;
+  
+  /* Borda (específica da BottomBar) */
+  border: var(--glass-border-light);
+
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+/* Mostra a barra APENAS no mobile */
+@media (max-width: 768px) {
+  .bottomBar {
+    display: flex;
+  }
+}
+
+.navIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.5rem; /* Ícone */
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+  color: var(--cor-texto); /* Texto preto (para o "claro") */
+}
+.navIcon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.navLabel {
+  font-size: 0.5em; /* Texto pequeno */
+  font-weight: 500;
+}
